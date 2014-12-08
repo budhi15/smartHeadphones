@@ -17,6 +17,46 @@ fs = 22050;
 files = dir('../Sound Samples/Cleaned Data/Phone Rings/*.wav');
 for file=files'
     sound = audioread(strcat('../Sound Samples/Cleaned Data/Phone Rings/',file.name));
+    sound = sound(:,1);
+    % Feature extraction (feature vectors as columns)
+    [ MFCCs, FBEs, frames ] = ...
+                    mfcc( sound, fs, Tw, Ts, alpha, @hamming, [LF HF], M, C+1, L );
+    if features == 0
+        features = MFCCs;
+    else
+        features = [features, MFCCs];
+    end
+end
+
+files = dir('../Sound Samples/Cleaned Data/Background/*.wav');
+for file=files'
+    sound = audioread(strcat('../Sound Samples/Cleaned Data/Background/',file.name));
+    % Feature extraction (feature vectors as columns)
+    [ MFCCs, FBEs, frames ] = ...
+                    mfcc( sound, fs, Tw, Ts, alpha, @hamming, [LF HF], M, C+1, L );
+    if features == 0
+        features = MFCCs;
+    else
+        features = [features, MFCCs];
+    end
+end
+
+files = dir('../Sound Samples/Cleaned Data/Emergency Vehicles/*.wav');
+for file=files'
+    sound = audioread(strcat('../Sound Samples/Cleaned Data/Emergency Vehicles/',file.name));
+    % Feature extraction (feature vectors as columns)
+    [ MFCCs, FBEs, frames ] = ...
+                    mfcc( sound, fs, Tw, Ts, alpha, @hamming, [LF HF], M, C+1, L );
+    if features == 0
+        features = MFCCs;
+    else
+        features = [features, MFCCs];
+    end
+end
+
+files = dir('../Sound Samples/Cleaned Data/Honks/*.wav');
+for file=files'
+    sound = audioread(strcat('../Sound Samples/Cleaned Data/Honks/',file.name));
     % Feature extraction (feature vectors as columns)
     [ MFCCs, FBEs, frames ] = ...
                     mfcc( sound, fs, Tw, Ts, alpha, @hamming, [LF HF], M, C+1, L );
