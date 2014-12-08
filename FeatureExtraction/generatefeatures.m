@@ -1,0 +1,46 @@
+%requires mfcc package
+%http://www.mathworks.com/matlabcentral/fileexchange/32849-htk-mfcc-matlab
+addpath('../../mfcc/mfcc');
+
+features = 0;
+Tw = 25;                % analysis frame duration (ms)
+Ts = 10;                % analysis frame shift (ms)
+alpha = 0.97;           % preemphasis coefficient
+M = 20;                 % number of filterbank channels 
+C = 12;                 % number of cepstral coefficients
+L = 22;                 % cepstral sine lifter parameter
+LF = 300;               % lower frequency limit (Hz)
+HF = 3700;              % upper frequency limit (Hz)
+fs = 22050;
+
+%build array of sounds
+files = dir('../Sound Samples/Cleaned Data/Phone Rings/*.wav');
+for file=files'
+    sound = audioread(strcat('../Sound Samples/Cleaned Data/Phone Rings/',file.name));
+    % Feature extraction (feature vectors as columns)
+    [ MFCCs, FBEs, frames ] = ...
+                    mfcc( sound, fs, Tw, Ts, alpha, @hamming, [LF HF], M, C+1, L );
+    if features == 0
+        features = MFCCs;
+    else
+        features = [features, MFCCs];
+    end
+end
+
+%extract nmf features from sounds
+num_features = 12;
+nmffeatures = nnmf(features,num_features);
+nmfweights = transpose(nmffeatures)*features;
+for i=1:num_features
+    subplot(num_features/3,3,i);
+    plot(nmffeatures(:,i));
+end
+figure;
+
+for i=1:num_features
+    subplot(num_features/3+1,3,i);
+    plot(nmfweights(i,:));
+end
+subplot(num_features/3+1,1,num_features/3+1);
+imagesc(features);
+%}
