@@ -1,22 +1,22 @@
 <?xml version="1.0" standalone="no" ?>
 <!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
-<project xmlns="http://audacity.sourceforge.net/xml/" projname="B09_H45_overlap_data" version="1.3.0" audacityversion="2.0.5" sel0="5.3976143141" sel1="20.8449304175" vpos="0" h="3.5188866799" zoom="33.5333333333" rate="44100.0">
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="B09_H45_overlap_data" version="1.3.0" audacityversion="2.0.5" sel0="0.0000000000" sel1="15.3578528827" vpos="0" h="0.0000000000" zoom="33.5333333333" rate="44100.0">
 	<tags>
 		<tag name="Software" value="Lavf56.12.103"/>
 		<tag name="YEAR" value="2014-04-02T23:53:56-04:00"/>
 		<tag name="COMMENTS" value="vehicle043"/>
 	</tags>
-	<wavetrack name="B09" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+	<wavetrack name="B09" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
 		<waveclip offset="0.00000000">
 			<sequence maxsamples="262144" sampleformat="262159" numsamples="661500">
 				<waveblock start="0">
-					<pcmaliasblockfile summaryfile="e0000b9f.auf" aliasfile="C:\Users\PULKIT\Documents\GitHub\smartHeadphones\Sound Samples\Cleaned Data\Background\B09.wav" aliasstart="0" aliaslen="262144" aliaschannel="0" min="-0.171204" max="0.128845" rms="0.029565"/>
+					<simpleblockfile filename="e0000a30.au" len="262144" min="-0.054121" max="0.040731" rms="0.009346"/>
 				</waveblock>
 				<waveblock start="262144">
-					<pcmaliasblockfile summaryfile="e00005ce.auf" aliasfile="C:\Users\PULKIT\Documents\GitHub\smartHeadphones\Sound Samples\Cleaned Data\Background\B09.wav" aliasstart="262144" aliaslen="262144" aliaschannel="0" min="-0.176544" max="0.177887" rms="0.030383"/>
+					<simpleblockfile filename="e000072e.au" len="262144" min="-0.05581" max="0.056234" rms="0.009605"/>
 				</waveblock>
 				<waveblock start="524288">
-					<pcmaliasblockfile summaryfile="e0000593.auf" aliasfile="C:\Users\PULKIT\Documents\GitHub\smartHeadphones\Sound Samples\Cleaned Data\Background\B09.wav" aliasstart="524288" aliaslen="137212" aliaschannel="0" min="-0.110413" max="0.095856" rms="0.019126"/>
+					<simpleblockfile filename="e0000471.au" len="137212" min="-0.034904" max="0.030302" rms="0.006046"/>
 				</waveblock>
 			</sequence>
 			<envelope numpoints="0"/>
