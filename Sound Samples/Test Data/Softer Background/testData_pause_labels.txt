@@ -1,0 +1,21 @@
+4.40	4.80	Honk
+20.91	22.43	Honk
+37.22	37.77	Honk
+59.48	60.50	Ring
+69.37	73.54	Emergency Vehicle
+86.43	92.09	Emergency Vehicle
+105.65	106.64	Ring
+107.96	108.95	Ring
+130.42	132.39	Ring
+146.73	152.51	Emergency Vehicle
+162.27	164.21	Emergency Vehicle
+179.57	181.92	Emergency Vehicle
+201.69	203.09	Honk
+226.03	226.99	Honk
+234.88	237.42	Ring
+249.03	251.70	Emergency Vehicle
+274.45	274.74	Honk
+283.29	285.27	Ring
+286.93	288.92	Ring
+303.76	305.05	Ring
+321.68	324.00	Emergency Vehicle
