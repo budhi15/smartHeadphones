@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="no" ?>
+<!DOCTYPE project PUBLIC "-//audacityproject-1.3.0//DTD//EN" "http://audacity.sourceforge.net/xml/audacityproject-1.3.0.dtd" >
+<project xmlns="http://audacity.sourceforge.net/xml/" projname="B12_E14_overlap_data" version="1.3.0" audacityversion="2.0.5" sel0="2.4453280318" sel1="5.8449304175" vpos="0" h="0.0000000000" zoom="33.5333333333" rate="44100.0">
+	<tags>
+		<tag name="YEAR" value="2014-03-06T12:40-05:00"/>
+		<tag name="Software" value="Sony Sound Forge 8.0"/>
+		<tag name="COMMENTS" value="56"/>
+	</tags>
+	<wavetrack name="B12" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="0" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="0.00000000">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="661500">
+				<waveblock start="0">
+					<simpleblockfile filename="e0000980.au" len="262144" min="-0.056234" max="0.054949" rms="0.011243"/>
+				</waveblock>
+				<waveblock start="262144">
+					<simpleblockfile filename="e00003f3.au" len="262144" min="-0.055668" max="0.05235" rms="0.011898"/>
+				</waveblock>
+				<waveblock start="524288">
+					<simpleblockfile filename="e000030b.au" len="137212" min="-0.054306" max="0.054738" rms="0.010673"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+	<wavetrack name="E14" channel="2" linked="0" mute="0" solo="0" height="150" minimized="0" isSelected="1" rate="44100" gain="1.0" pan="0.0">
+		<waveclip offset="2.44532803">
+			<sequence maxsamples="262144" sampleformat="262159" numsamples="118360">
+				<waveblock start="0">
+					<simpleblockfile filename="e00002bc.au" len="118360" min="-0.885773" max="0.874054" rms="0.187971"/>
+				</waveblock>
+			</sequence>
+			<envelope numpoints="0"/>
+		</waveclip>
+	</wavetrack>
+</project>
