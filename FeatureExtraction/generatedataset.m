@@ -1,4 +1,4 @@
-function W = getfeatures(path)
+function data = generatedataset(path)
 addpath('../../istft');
 
 features = 0;
@@ -25,9 +25,6 @@ for file=files'
     end
 end
 
-realfeats = real(features);
-
-num_features = size(realfeats,1);
-[W,H] = nnmf(realfeats,num_features);
+data = real(features);
 end
 
